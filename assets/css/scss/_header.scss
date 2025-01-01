@@ -1,0 +1,94 @@
+.header {
+  width: 100%;
+  padding: 25px 20px 0;
+  position: sticky;
+  top: 0;
+  z-index: 5;
+
+  &__container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--light);
+    height: 88px;
+    padding: 15px 20px;
+    border-radius: 100px;
+    box-shadow: 0 0 10px 1px rgba(0,0,0,.2);
+    position: relative;
+  }
+
+  &__logo {
+    font-size: 24px;
+    font-weight: 600;
+  }
+
+  .menu {
+    display: flex;
+    gap: 60px;
+
+    &__link {
+      font-size: 18px;
+      transition: 0.15s;
+
+      &:hover {
+        color: var(--primary);
+      }
+    }
+  }
+
+  &__icon {
+    width: 50px;
+    height: 50px;
+    background: var(--primary-10);
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    display: none;
+
+    .burger {
+      width: 20px;
+      height: 2px;
+      background: var(--primary);
+      position: absolute;
+      top: 50%;
+      left: 45%;
+      transform: translate(-50%, -50%);
+      transition: .25s;
+
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        background: var(--primary);
+        width: 130%;
+        height: 2px;
+        transition: .25s;
+      }
+
+      &::before {
+        top: -10px;
+      }
+
+      &::after {
+        top: 10px;
+      }
+    }
+
+    &_active {
+      .burger {
+        background: transparent;
+
+        &::before {
+          top: 0;
+          transform: rotate(45deg);
+        }
+
+        &::after {
+          top: 0;
+          transform: rotate(135deg);
+        }
+      }
+    }
+  }
+}

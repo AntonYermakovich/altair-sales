@@ -1,0 +1,54 @@
+.who {
+  padding: 100px 0 200px;
+
+  &__list {
+    margin-top: 100px;
+    display: grid;
+    gap: 80px;
+
+    .item {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+
+      p {
+        font-weight: 700;
+        text-wrap: balance;
+        font-size: calc(24px + 30 * (100vw - 375px) / 1300);
+      }
+
+      svg {
+        height: 91px;
+        width: 91px;
+        fill: rgba(255, 255, 255, 0.1);
+        flex-shrink: 0;
+      }
+
+      &_active {
+        position: relative;
+        width: fit-content;
+
+        svg {
+          fill: var(--primary);
+        }
+
+        p {
+          background: var(--primary-10);
+          color: var(--primary);
+          border-radius: 100px;
+          padding: 24px 62px;
+        }
+
+        &::before {
+          content: '';
+          position: absolute;
+          right: -250px;
+          top: 23px;
+          background: url(../img/arrow-bottom.png) no-repeat right bottom / contain;
+          width: 200px;
+          height: 192px;
+        }
+      }
+    }
+  }
+}

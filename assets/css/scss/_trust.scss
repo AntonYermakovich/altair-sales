@@ -1,0 +1,23 @@
+.trust {
+  background: var(--light);
+  padding: 100px 0;
+
+  img {
+    width: 100%;
+  }
+
+  &__splide {
+    &-1 {
+      margin-top: 60px;
+      margin-bottom: 30px;
+    }
+
+    .splide__list {
+      align-items: center;
+      text-align: center;
+
+      
+    }
+  }
+}
+
