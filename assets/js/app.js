@@ -98,3 +98,24 @@ new Splide(".solution__steps", {
     }
   },
 }).mount();
+
+new Splide(".reviews__splide", {
+  perPage: 4,
+  rewind: true,
+  arrows: false,
+  pagination: false,
+  padding: '20px',
+  gap: "20px",
+  breakpoints: {
+    1300: {
+      perPage: 3,
+      pagination: true,
+    },
+    1024: {
+      perPage: 2,
+    },
+    768: {
+      perPage: 1,
+    }
+  },
+}).mount();

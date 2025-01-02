@@ -134,6 +134,21 @@ span {
   font-weight: 700;
 }
 
+.splide__pagination {
+  bottom: -2.5em;
+  justify-content: start;
+  padding: 0;
+
+  &__page {
+    background: var(--primary-30);
+
+    &.is-active {
+      background: var(--primary);
+    }
+  }
+}
+  
+
 // Animations
 @keyframes move-light {
   from {
