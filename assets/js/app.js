@@ -78,3 +78,23 @@ new Splide(".trust__splide-2", {
     },
   },
 }).mount(window.splide.Extensions);
+
+new Splide(".solution__steps", {
+  perPage: 4,
+  rewind: true,
+  arrows: false,
+  pagination: false,
+  gap: "30px",
+  breakpoints: {
+    1300: {
+      perPage: 3,
+      pagination: true,
+    },
+    1024: {
+      perPage: 2,
+    },
+    768: {
+      perPage: 1,
+    }
+  },
+}).mount();
