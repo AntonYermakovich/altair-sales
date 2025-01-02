@@ -119,3 +119,20 @@ new Splide(".reviews__splide", {
     }
   },
 }).mount();
+
+new Splide(".plans__splide", {
+  perPage: 3,
+  rewind: true,
+  arrows: false,
+  pagination: false,
+  gap: "20px",
+  breakpoints: {
+    1300: {
+      perPage: 2,
+      pagination: true,
+    },
+    768: {
+      perPage: 1,
+    }
+  },
+}).mount();

@@ -167,6 +167,17 @@
       grid-template-columns: repeat(4, 1fr);
     }
   }
+
+  .plans {
+    &__title {
+      grid-template-columns: 1fr;
+
+      p {
+        margin-top: 20px;
+        justify-self: start;
+      }
+    }
+  }
 }
 
 @media (max-width: 768px) {
@@ -308,12 +319,12 @@
       }
     }
 
+    &__btn {
+      display: block;
+    }
+
     &__splide {
       margin-top: 30px;
-    }
-    
-    .splide__pagination {
-      margin-left: 20px;
     }
   }
 }
@@ -355,6 +366,15 @@
   .cases {
     h2.title {
       max-width: 100%;
+    }
+  }
+
+  .plans {
+    .plan {
+      
+    }
+    .btn {
+      padding: 20px 15px;
     }
   }
 

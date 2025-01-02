@@ -339,7 +339,7 @@ span.underline {
 }
 
 .solution {
-  padding: 100px 0;
+  padding: 120px 0 100px;
 }
 .solution__title {
   margin-bottom: 50px;
@@ -580,7 +580,7 @@ span.underline {
 }
 
 .cases {
-  padding: 100px 0;
+  padding: 120px 0 100px;
 }
 .cases h2.title {
   max-width: 50%;
@@ -690,6 +690,82 @@ span.underline {
   font-weight: 500;
   line-height: 22px;
   color: var(--second);
+}
+.reviews .splide__pagination {
+  margin-left: 20px;
+}
+
+.plans {
+  padding: 120px 0 100px;
+  background: var(--light);
+}
+.plans__title {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-bottom: 50px;
+}
+.plans__title p {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 22px;
+  max-width: 350px;
+  color: var(--second);
+  justify-self: end;
+}
+.plans .plan {
+  background: var(--bg-gray);
+  border-radius: 16px;
+  padding: 32px;
+}
+.plans .plan__number {
+  background: var(--primary);
+  border-radius: 8px;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--light);
+  letter-spacing: -0.02em;
+  width: 50px;
+  height: 50px;
+  display: grid;
+  place-items: center;
+  margin-bottom: 20px;
+}
+.plans .plan__month {
+  padding: 10px 15px;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--primary);
+  background: var(--primary-10);
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 100px;
+}
+.plans .plan__price {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--dark-30);
+  margin: 15px 0 30px;
+}
+.plans .plan__price span {
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--dark);
+}
+.plans .plan .advantages {
+  margin-bottom: 30px;
+}
+.plans .plan .advantages .advantage {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 27px;
+  color: var(--second);
+  list-style: disc;
+  margin-left: 20px;
+}
+.plans .plan .btn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .modal {
@@ -893,6 +969,13 @@ span.underline {
   .integration .list {
     grid-template-columns: repeat(4, 1fr);
   }
+  .plans__title {
+    grid-template-columns: 1fr;
+  }
+  .plans__title p {
+    margin-top: 20px;
+    justify-self: start;
+  }
 }
 @media (max-width: 768px) {
   :root {
@@ -994,11 +1077,11 @@ span.underline {
   .reviews__title button {
     display: none;
   }
+  .reviews__btn {
+    display: block;
+  }
   .reviews__splide {
     margin-top: 30px;
-  }
-  .reviews .splide__pagination {
-    margin-left: 20px;
   }
 }
 @media (max-width: 540px) {
@@ -1025,6 +1108,9 @@ span.underline {
   }
   .cases h2.title {
     max-width: 100%;
+  }
+  .plans .btn {
+    padding: 20px 15px;
   }
   .modal .form h2 {
     font-size: 20px;
