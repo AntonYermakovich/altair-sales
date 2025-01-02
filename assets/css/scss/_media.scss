@@ -19,6 +19,24 @@
       grid-template-columns: repeat(6, 1fr);
     }
   }
+
+  .cases {
+    h2.title {
+      max-width: 70%;
+    }
+
+    .list {
+      .item {
+        h4 {
+          font-size: 30px;
+
+          span {
+            font-size: 50px;
+          }
+        }
+      }
+    }
+  }
 }
 
 @media (max-width: 1120px) {
@@ -272,6 +290,16 @@
       }
     }
   }
+
+  .cases {
+    h2.title {
+      max-width: 90%;
+    }
+
+    .list {
+      grid-template-columns: 1fr;
+    }
+  }
 }
 
 @media (max-width: 540px) {
@@ -305,6 +333,12 @@
     &__btn {
       width: 100%;
       justify-content: center;
+    }
+  }
+
+  .cases {
+    h2.title {
+      max-width: 100%;
     }
   }
 

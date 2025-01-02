@@ -1,0 +1,9 @@
+.reviews {
+  padding: 100px 0;
+  background: var(--light);
+
+  &__btn {
+    display: none;
+    margin: 75px auto;
+  }
+}

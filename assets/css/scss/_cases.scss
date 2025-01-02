@@ -1,0 +1,52 @@
+.cases {
+  padding: 100px 0;
+
+  h2.title {
+    max-width: 50%;
+  }
+
+  .list {
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+
+    .item {
+      border-radius: 16px;
+      background: var(--light);
+      padding: 25px 30px;
+
+      &__img {
+        height: 185px;
+        border-radius: 8px;
+        background: var(--bg-gray);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: var(--dark-30);
+        font-size: 36px;
+        text-transform: uppercase;
+        font-weight: 700;
+      }
+
+      h4 {
+        font-size: 36px;
+        font-weight: 700;
+        margin-top: 16px;
+
+        span {
+          font-size: 70px;
+        }
+      }
+
+      p {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 22px;
+        color: var(--second);
+        max-width: 377px;
+        margin-top: 16px;
+      }
+    }
+  }
+}
