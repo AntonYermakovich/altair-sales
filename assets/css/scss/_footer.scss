@@ -1,0 +1,43 @@
+.footer {
+  background: var(--primary);
+  color: var(--light);
+  padding: 70px 0 50px;
+
+  &__container {
+    display: grid;
+    gap: 50px;
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    h5 {
+      color: var(--light-50);
+      display: none;
+    }
+
+    p {
+      font-size: 24px;
+      font-weight: 600;
+    }
+
+    ul {
+      display: flex;
+      gap: 20px;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--light-50);
+    font-size: 16px;
+
+    p {
+      text-decoration: underline;
+    }
+  }
+}

@@ -8,6 +8,7 @@
   --container-padding: 20px;
   --bg-gray: #f0f0f1;
   --light: #fff;
+  --light-50: rgba(255, 255, 255,.5);
   --dark: #0b0d1a;
   --dark-30: rgba(11, 13, 26, 0.3);
   --dark-50: rgba(11, 13, 26, 0.5);
@@ -768,6 +769,144 @@ span.underline {
   justify-content: center;
 }
 
+.contacts {
+  padding: 100px 0 0;
+}
+.contacts__container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+.contacts__info {
+  margin-bottom: 80px;
+}
+.contacts__img {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.contacts__img::before {
+  content: "";
+  height: 100%;
+  width: 100%;
+  display: block;
+  background: url("../img/hero-phone.png") no-repeat bottom right/contain;
+}
+.contacts__img::after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  background: url("../img/hero-vertical.png") no-repeat bottom right/contain;
+  display: block;
+  position: absolute;
+  bottom: -100px;
+  z-index: -1;
+}
+.contacts__img img {
+  width: 100%;
+  height: 100%;
+}
+.contacts .form {
+  margin-top: 60px;
+  background: var(--light);
+  max-width: 640px;
+  width: 100%;
+  padding: 30px;
+  border-radius: 16px;
+}
+.contacts .form h2 {
+  font-size: 28px;
+  font-weight: 700;
+  max-width: 410px;
+  line-height: 35px;
+  margin-bottom: 32px;
+}
+.contacts .form__field {
+  width: 100%;
+  height: 80px;
+  background: var(--bg-gray);
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  padding: 0 32px;
+  position: relative;
+  margin-bottom: 10px;
+}
+.contacts .form__field input {
+  width: 100%;
+  font-size: 18px;
+  padding: 10px 0;
+}
+.contacts .form__field input:not(:-moz-placeholder-shown) ~ label {
+  top: 10px;
+  font-size: 14px;
+}
+.contacts .form__field input:focus ~ label, .contacts .form__field input:not(:placeholder-shown) ~ label {
+  top: 10px;
+  font-size: 14px;
+}
+.contacts .form__field label {
+  font-size: 18px;
+  position: absolute;
+  top: 30px;
+  left: 32px;
+  pointer-events: none;
+  transition: 0.15s;
+}
+.contacts .form__actions {
+  margin-top: 40px;
+  display: grid;
+  gap: 20px;
+}
+.contacts .form__actions button {
+  width: 100%;
+  justify-content: center;
+  padding: 30px 0;
+}
+.contacts .form__actions p {
+  font-weight: 500;
+  font-size: 12px;
+  color: var(--second);
+  opacity: 0.5;
+}
+
+.footer {
+  background: var(--primary);
+  color: var(--light);
+  padding: 70px 0 50px;
+}
+.footer__container {
+  display: grid;
+  gap: 50px;
+}
+.footer__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer__top h5 {
+  color: var(--light-50);
+  display: none;
+}
+.footer__top p {
+  font-size: 24px;
+  font-weight: 600;
+}
+.footer__top ul {
+  display: flex;
+  gap: 20px;
+}
+.footer__bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--light-50);
+  font-size: 16px;
+}
+.footer__bottom p {
+  text-decoration: underline;
+}
+
 .modal {
   position: fixed;
   top: 0;
@@ -976,6 +1115,43 @@ span.underline {
     margin-top: 20px;
     justify-self: start;
   }
+  .contacts__container {
+    grid-template-columns: 1fr;
+  }
+  .contacts__img {
+    display: none;
+  }
+  .contacts .form {
+    max-width: 100%;
+  }
+  .contacts .form h2 {
+    font-size: 20px;
+    line-height: 25px;
+  }
+  .contacts .form button {
+    padding: 20px;
+  }
+  .contacts .form__actions {
+    margin-top: 20px;
+  }
+  .contacts .form__field {
+    height: 60px;
+  }
+  .contacts .form__field input {
+    font-size: 16px;
+  }
+  .contacts .form__field input:not(:-moz-placeholder-shown) ~ label {
+    top: 5px;
+    font-size: 12px;
+  }
+  .contacts .form__field input:focus ~ label, .contacts .form__field input:not(:placeholder-shown) ~ label {
+    top: 5px;
+    font-size: 12px;
+  }
+  .contacts .form__field label {
+    font-size: 16px;
+    top: 20px;
+  }
 }
 @media (max-width: 768px) {
   :root {
@@ -1083,6 +1259,27 @@ span.underline {
   .reviews__splide {
     margin-top: 30px;
   }
+  .footer__container {
+    gap: 30px;
+  }
+  .footer__top {
+    flex-wrap: wrap;
+  }
+  .footer__top p {
+    width: 80%;
+  }
+  .footer__top h5 {
+    display: block;
+    width: 20%;
+    text-align: right;
+  }
+  .footer__top ul {
+    flex-direction: column;
+    margin-top: 30px;
+  }
+  .footer__bottom h5 {
+    display: none;
+  }
 }
 @media (max-width: 540px) {
   :root {
@@ -1108,6 +1305,12 @@ span.underline {
   }
   .cases h2.title {
     max-width: 100%;
+  }
+  .reviews {
+    padding: 100px 0 10px;
+  }
+  .plans {
+    padding: 0 0 100px;
   }
   .plans .btn {
     padding: 20px 15px;

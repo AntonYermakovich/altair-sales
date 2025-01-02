@@ -178,6 +178,50 @@
       }
     }
   }
+
+  .contacts {
+    &__container {
+      grid-template-columns: 1fr;
+    }
+    &__img {
+      display: none;
+    }
+
+    .form {
+      max-width: 100%;
+      h2 {
+        font-size: 20px;
+        line-height: 25px;
+      }
+
+      button {
+        padding: 20px;
+      }
+
+      &__actions {
+        margin-top: 20px;
+      }
+
+      &__field {
+        height: 60px;
+
+        input {
+          font-size: 16px;
+
+          &:focus ~ label,
+          &:not(:placeholder-shown) ~ label {
+            top: 5px;
+            font-size: 12px;
+          }
+        }
+
+        label {
+          font-size: 16px;
+          top: 20px;
+        }
+      }
+    }
+  }
 }
 
 @media (max-width: 768px) {
@@ -327,6 +371,37 @@
       margin-top: 30px;
     }
   }
+
+  .footer {
+    &__container {
+      gap: 30px;
+    }
+
+    &__top {
+      flex-wrap: wrap;
+
+      p {
+        width: 80%;
+      }
+
+      h5 {
+        display: block;
+        width: 20%;
+        text-align: right;
+      }
+
+      ul {
+        flex-direction: column;
+        margin-top: 30px;
+      }
+    }
+
+    &__bottom {
+      h5 {
+        display: none;
+      }
+    }
+  }
 }
 
 @media (max-width: 540px) {
@@ -368,11 +443,12 @@
       max-width: 100%;
     }
   }
-
+  .reviews {
+    padding: 100px 0 10px;
+  }
   .plans {
-    .plan {
-      
-    }
+    padding: 0 0 100px;
+
     .btn {
       padding: 20px 15px;
     }
