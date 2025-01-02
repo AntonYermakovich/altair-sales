@@ -100,6 +100,7 @@
         display: none;
       }
     }
+
     &__steps .splide__slide {
       .item {
         &__img {
@@ -129,6 +130,11 @@
         font-size: 30px;
         line-height: 35px;
       }
+    }
+
+    &__btn {
+      display: block;
+      margin: 80px auto 0;
     }
   }
 }
