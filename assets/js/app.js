@@ -20,6 +20,7 @@ function openMenu() {
   const headerContainer = document.querySelector(".header__container");
   const menu = document.querySelector(".menu");
   const overlay = document.querySelector(".overlay");
+  const menuLinks = document.querySelectorAll('.menu__link')
 
   if (this.classList.contains("header__icon_active")) {
     this.classList.remove("header__icon_active");
@@ -38,6 +39,13 @@ function openMenu() {
       overlay.classList.remove("overlay_show");
       menu.classList.remove("menu_show");
     });
+
+    menuLinks.forEach(link => link.addEventListener('click', e => {
+      this.classList.remove("header__icon_active");
+      headerContainer.classList.remove("header__container_active");
+      overlay.classList.remove("overlay_show");
+      menu.classList.remove("menu_show");
+    }))
   }
 }
 
@@ -52,6 +60,7 @@ new Splide(".trust__splide-1", {
   drag: "free",
   gap: "20px",
   autoScroll: {
+    pauseOnHover: false,
     speed: 0.5,
   },
   breakpoints: {
@@ -70,6 +79,7 @@ new Splide(".trust__splide-2", {
   drag: "free",
   gap: "20px",
   autoScroll: {
+    pauseOnHover: false,
     speed: -0.5,
   },
   breakpoints: {
@@ -106,6 +116,9 @@ new Splide(".reviews__splide", {
   pagination: false,
   padding: '20px',
   gap: "20px",
+  autoScroll: {
+    speed: 0.4,
+  },
   breakpoints: {
     1300: {
       perPage: 3,
@@ -118,7 +131,7 @@ new Splide(".reviews__splide", {
       perPage: 1,
     }
   },
-}).mount();
+}).mount(window.splide.Extensions);
 
 new Splide(".plans__splide", {
   perPage: 3,

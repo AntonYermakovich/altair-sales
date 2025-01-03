@@ -1,26 +1,21 @@
 .hero {
   margin-top: 83px;
-  background: url('../img/hero-laptop.png') no-repeat right 30px / 60% auto;
-  padding-bottom: 80px;
+  background: url("../img/hero-laptop.png") no-repeat right 30px / 60% auto;
   position: relative;
 
   &::before {
-    content: '';
+    content: "";
     width: 400px;
     height: 550px;
-    background: url('../img/hero-vertical.png') no-repeat center right / contain;
+    background: url("../img/hero-vertical.png") no-repeat center right / contain;
     position: absolute;
     right: 2%;
     z-index: -1;
   }
 
-  &__container {
-    width: 100%;
-    display: flex;
-    position: relative;
-  }
-
   &__content {
+    padding-bottom: 83px;
+
     h1 {
       max-width: 700px;
       font-weight: 700;
