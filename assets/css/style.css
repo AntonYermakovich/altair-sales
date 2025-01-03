@@ -159,6 +159,9 @@ span.underline {
   border-radius: 100px;
   position: relative;
 }
+.header__container_scroll {
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.2);
+}
 .header__logo {
   font-size: 24px;
   font-weight: 600;

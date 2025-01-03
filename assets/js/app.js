@@ -13,6 +13,14 @@ function showModalDemo() {
   });
 }
 
+// box shadow for menu
+const headerContainer = document.querySelector(".header__container");
+window.addEventListener("scroll", () => {
+  window.scrollY >= 10
+    ? headerContainer.classList.add("header__container_scroll")
+    : headerContainer.classList.remove("header__container_scroll");
+});
+
 // Open menu
 document.querySelector(".header__icon").addEventListener("click", openMenu);
 
@@ -20,7 +28,7 @@ function openMenu() {
   const headerContainer = document.querySelector(".header__container");
   const menu = document.querySelector(".menu");
   const overlay = document.querySelector(".overlay");
-  const menuLinks = document.querySelectorAll('.menu__link')
+  const menuLinks = document.querySelectorAll(".menu__link");
 
   if (this.classList.contains("header__icon_active")) {
     this.classList.remove("header__icon_active");
@@ -40,12 +48,14 @@ function openMenu() {
       menu.classList.remove("menu_show");
     });
 
-    menuLinks.forEach(link => link.addEventListener('click', e => {
-      this.classList.remove("header__icon_active");
-      headerContainer.classList.remove("header__container_active");
-      overlay.classList.remove("overlay_show");
-      menu.classList.remove("menu_show");
-    }))
+    menuLinks.forEach((link) =>
+      link.addEventListener("click", (e) => {
+        this.classList.remove("header__icon_active");
+        headerContainer.classList.remove("header__container_active");
+        overlay.classList.remove("overlay_show");
+        menu.classList.remove("menu_show");
+      })
+    );
   }
 }
 
@@ -105,7 +115,7 @@ new Splide(".solution__steps", {
     },
     768: {
       perPage: 1,
-    }
+    },
   },
 }).mount();
 
@@ -114,9 +124,10 @@ new Splide(".reviews__splide", {
   rewind: true,
   arrows: false,
   pagination: false,
-  padding: '20px',
+  padding: "20px",
   gap: "20px",
   autoScroll: {
+    pauseOnHover: false,
     speed: 0.4,
   },
   breakpoints: {
@@ -129,7 +140,7 @@ new Splide(".reviews__splide", {
     },
     768: {
       perPage: 1,
-    }
+    },
   },
 }).mount(window.splide.Extensions);
 
@@ -146,6 +157,6 @@ new Splide(".plans__splide", {
     },
     768: {
       perPage: 1,
-    }
+    },
   },
 }).mount();
