@@ -1218,9 +1218,6 @@ span.underline {
     position: relative;
     z-index: 2;
   }
-  .header .btn {
-    display: none;
-  }
   .header__icon {
     display: block;
   }
