@@ -1,17 +1,7 @@
 .hero {
   margin-top: 83px;
-  background: url("../img/hero-laptop.png") no-repeat right 30px / 60% auto;
   position: relative;
-
-  &::before {
-    content: "";
-    width: 400px;
-    height: 550px;
-    background: url("../img/hero-vertical.png") no-repeat center right / contain;
-    position: absolute;
-    right: 2%;
-    z-index: -1;
-  }
+  overflow: hidden;
 
   &__content {
     padding-bottom: 83px;
@@ -49,6 +39,69 @@
         img {
           margin-top: 6px;
         }
+      }
+    }
+  }
+
+  &__video {
+    width: 100%;
+    height: 100%;
+    width: 55%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: url("../img/hero-laptop.png") no-repeat left 50px / 1000px 700px;
+
+    &::before {
+      content: "";
+      max-width: 400px;
+      width: 100%;
+      height: 550px;
+      background: url("../img/hero-vertical.png") no-repeat center / contain;
+      position: absolute;
+      left: 50%;
+      z-index: -1;
+    }
+
+    &::after {
+      content: "";
+      width: 755px;
+      height: 500px;
+      background: var(--light-50);
+      display: block;
+      position: absolute;
+      top: 101px;
+      left: 123px;
+    }
+
+    button {
+      border-radius: 100px;
+      background: var(--primary-10);
+      color: var(--primary);
+      position: absolute;
+      z-index: 1;
+      top: 121px;
+      left: 143px;
+      padding: 7px 11px;
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      transition: .15s;
+
+      &:hover {
+        background: var(--primary-30);
+      }
+
+      svg {
+        width: 25px;
+        height: 25px;
+        fill: var(--primary);
+      }
+
+      span {
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 19px;
       }
     }
   }
