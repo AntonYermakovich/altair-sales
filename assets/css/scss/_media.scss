@@ -237,10 +237,16 @@
 
   .header {
     &__container {
-      transition: 0.15s;
+      transition: 0.35s;
+
       &_active {
-        border-radius: 50px 50px 0 0;
+        width: 320px;
       }
+    }
+
+    &__logo {
+      position: relative;
+      z-index: 2;
     }
 
     .btn {
@@ -256,22 +262,20 @@
       align-items: center;
       flex-direction: column;
       position: absolute;
-      top: 100%;
-      left: 0;
+      top: 0;
+      left: -50%;
       padding: 10px 0 20px;
       background: var(--light);
-      border-radius: 0 0 40px 40px;
-      width: 100%;
+      border-radius: 0 20px 20px 0;
+      width: 250px;
+      height: 100vh;
       box-shadow: 0 10px 10px 1px rgba(0, 0, 0, 0.2);
-      z-index: 5;
+      z-index: 1;
       transition: 0.25s;
-      opacity: 0;
-      visibility: hidden;
+      padding-top: 200px;
 
       &_show {
-        transition-delay: 0.15s;
-        opacity: 1;
-        visibility: visible;
+        left: 0;
       }
 
       &__link {
