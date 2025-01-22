@@ -50,13 +50,13 @@
     position: absolute;
     top: 0;
     right: 0;
-    background: url("../img/hero-laptop.png") no-repeat left 50px / 1000px 700px;
+    background: url("../img/hero-laptop.png") no-repeat left 50px / 1000px 600px;
 
     video {
       width: 755px;
-      height: 500px;
+      height: 430px;
       position: absolute;
-      top: 101px;
+      top: 94px;
       left: 123px;
       z-index: 2;
       object-fit: fill;
@@ -73,16 +73,17 @@
       z-index: -1;
     }
 
-    &::after {
-      content: "";
-      width: 755px;
-      height: 500px;
-      background: var(--light);
-      display: block;
-      position: absolute;
-      top: 101px;
-      left: 123px;
-    }
+    // &::after {
+    //   content: "";
+    //   width: 755px;
+    //   height: 463px;
+    //   // background: var(--light);
+    //   background: rgba(255,0,0,.5);
+    //   display: block;
+    //   position: absolute;
+    //   top: 101px;
+    //   left: 123px;
+    // }
 
     button {
       border-radius: 100px;

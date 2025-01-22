@@ -267,13 +267,13 @@ span.underline {
   position: absolute;
   top: 0;
   right: 0;
-  background: url("../img/hero-laptop.png") no-repeat left 50px/1000px 700px;
+  background: url("../img/hero-laptop.png") no-repeat left 50px/1000px 600px;
 }
 .hero__video video {
   width: 755px;
-  height: 500px;
+  height: 430px;
   position: absolute;
-  top: 101px;
+  top: 94px;
   left: 123px;
   z-index: 2;
   -o-object-fit: fill;
@@ -288,16 +288,6 @@ span.underline {
   position: absolute;
   left: 50%;
   z-index: -1;
-}
-.hero__video::after {
-  content: "";
-  width: 755px;
-  height: 500px;
-  background: var(--light);
-  display: block;
-  position: absolute;
-  top: 101px;
-  left: 123px;
 }
 .hero__video button {
   border-radius: 100px;
