@@ -124,6 +124,7 @@ new Splide(".reviews__splide", {
   rewind: true,
   arrows: false,
   pagination: false,
+  type: "loop",
   padding: "20px",
   gap: "20px",
   autoScroll: {
