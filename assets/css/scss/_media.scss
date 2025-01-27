@@ -136,15 +136,12 @@
     &__steps .splide__slide {
       .item {
         &__img {
+          width: 50%;
+          margin: 0 auto;
+
           img {
             width: 100%;
-          }
-          .mobile {
-            display: none;
-          }
-
-          .laptop {
-            display: block;
+            object-fit: fill;
           }
         }
 

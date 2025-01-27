@@ -6,21 +6,23 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     margin-bottom: 50px;
-
-    p {
-      font-size: 16px;
-      font-weight: 500;
-      line-height: 22px;
-      max-width: 350px;
-      color: var(--second);
-      justify-self: end;
-    }
   }
 
   .plan {
     background: var(--bg-gray);
     border-radius: 16px;
     padding: 32px;
+    display: flex;
+    flex-direction: column;
+
+    &__actions {
+      display: block;
+      margin-top: auto;
+
+      .btn {
+        padding: 20px 0;
+      }
+    }
 
     &__number {
       background: var(--primary);

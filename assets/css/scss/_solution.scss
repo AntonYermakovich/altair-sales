@@ -15,10 +15,6 @@
 
         &__img {
           width: 100%;
-
-          .laptop {
-            display: none;
-          }
         }
 
         &__content {
@@ -64,6 +60,7 @@
 
     .splide__pagination__page {
       background: var(--primary-30);
+      
       &.is-active {
         background: var(--primary);
       }
