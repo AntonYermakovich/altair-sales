@@ -330,6 +330,7 @@ span.underline {
   transform: translateX(-50%);
   border-radius: 15px;
   overflow: hidden;
+  pointer-events: none;
 }
 .hero__img-video video {
   width: 100%;
