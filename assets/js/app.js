@@ -16,7 +16,6 @@ function showModalDemo() {
 // box shadow for menu
 // Hide header
 const header = document.querySelector('.header');
-const headerOffsetHeight = header.offsetHeight
 const headerContainer = document.querySelector(".header__container");
 let prevScrollpos = window.pageYOffset;
 
@@ -25,7 +24,7 @@ window.addEventListener("scroll", () => {
   if (prevScrollpos > currentScrollPos) {
     document.querySelector(".header").style.top = "0";
   } else {
-    document.querySelector(".header").style.top = `-${headerOffsetHeight}px`;
+    document.querySelector(".header").style.top = `-300px`;
   }
   prevScrollpos = currentScrollPos;
 
