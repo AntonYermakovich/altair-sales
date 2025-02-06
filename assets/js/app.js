@@ -14,8 +14,21 @@ function showModalDemo() {
 }
 
 // box shadow for menu
+// Hide header
+const header = document.querySelector('.header');
+const headerOffsetHeight = header.offsetHeight
 const headerContainer = document.querySelector(".header__container");
+let prevScrollpos = window.pageYOffset;
+
 window.addEventListener("scroll", () => {
+  var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.querySelector(".header").style.top = "0";
+  } else {
+    document.querySelector(".header").style.top = `-${headerOffsetHeight}px`;
+  }
+  prevScrollpos = currentScrollPos;
+
   window.scrollY >= 10
     ? headerContainer.classList.add("header__container_scroll")
     : headerContainer.classList.remove("header__container_scroll");
@@ -62,13 +75,13 @@ function openMenu() {
 // Initial sliders
 // Trust
 new Splide(".trust__splide-1", {
-  perPage: 7,
+  perPage: 10,
   rewind: true,
   arrows: false,
   pagination: false,
   type: "loop",
   drag: "free",
-  gap: "20px",
+  gap: "50px",
   autoScroll: {
     pauseOnHover: false,
     speed: 0.5,
@@ -78,16 +91,16 @@ new Splide(".trust__splide-1", {
       perPage: 3,
     },
   },
-}).mount(window.splide.Extensions);
+}).mount(window.splide.Extensions); 
 
 new Splide(".trust__splide-2", {
-  perPage: 7,
+  perPage: 10,
   rewind: true,
   arrows: false,
   pagination: false,
   type: "loop",
   drag: "free",
-  gap: "20px",
+  gap: "50px",
   autoScroll: {
     pauseOnHover: false,
     speed: -0.5,

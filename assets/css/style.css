@@ -144,9 +144,10 @@ span.underline {
 .header {
   width: 100%;
   padding: 25px 20px 0;
-  position: sticky;
+  position: fixed;
   top: 0;
   z-index: 5;
+  transition: 0.5s;
 }
 .header__container {
   width: 100%;
@@ -222,7 +223,7 @@ span.underline {
 }
 
 .hero {
-  margin-top: 83px;
+  margin-top: 200px;
   position: relative;
   overflow: hidden;
 }
@@ -321,16 +322,17 @@ span.underline {
 }
 .hero__img-video {
   position: absolute;
-  top: 14px;
+  top: 13px;
   left: 351px;
   width: 155px;
-  height: 336px;
+  height: 338px;
   z-index: 2;
   left: 50%;
   transform: translateX(-50%);
   border-radius: 15px;
   overflow: hidden;
   pointer-events: none;
+  margin-left: -3px;
 }
 .hero__img-video video {
   width: 100%;
